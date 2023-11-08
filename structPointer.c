@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     int roll ;
   };
   struct Hello* hello;
+  int  p  = 10;
   hello ->roll = 20;
   printf("%d\n",hello->roll);
 }
