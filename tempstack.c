@@ -1,35 +1,38 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
-#define max 5
+// we  will be writing stack code
+// We needTo decide size of the array
 
-int top = -1, array[max];
+#define SIZE 5
 
-void insert() {
-  if (top == max - 1) {
-    printf("Stack Underflow");
+int top = -1,  array[SIZE];
+
+void push() {
+  if (top == SIZE - 1) {
+    printf("OverFlow\n");
   } else {
-    int val;
-    printf("Please Enter The Number\n");
-    scanf("%d", &val);
+    int num;
+    printf("Please Enter the number U wish to Add \n");
+    scanf("%d", &num);
     top = top + 1;
-    array[top] = val;
+    array[top] = num;
   }
 }
 
 void pop() {
   if (top == -1) {
-    printf("Stack Underflow");
+    printf("UnderFlow\n");
   } else {
-    printf("The Element deleted is %d\n", array[top]);
-    top--;
+    printf("Element %d IS Pooped !\n", array[top]);
+    top = top - 1;
   }
 }
 
 void show() {
-
   if (top == -1) {
-    printf("Stack Underflow");
+    printf("UnderFlow\n");
   } else {
     for (int i = 0; i <= top; i++) {
       printf("%d\n", array[i]);
@@ -45,7 +48,7 @@ int main() {
     scanf("%d", &choice);
     switch (choice) {
     case 1:
-      insert();
+      push();
       break;
     case 2:
       pop();
@@ -58,3 +61,4 @@ int main() {
     }
   }
 }
+
