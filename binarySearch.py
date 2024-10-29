@@ -3,7 +3,7 @@
 array = [ 2, 3, 4, 10, 40 ]
 
 
-x= 3
+x= 40
 
 
 def binarySearch(x,array, low , high):
